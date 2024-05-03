@@ -16,16 +16,20 @@ O objetivo deste projeto é demonstrar como escrever testes unitários eficazes pa
 
 - Java
 - JUnit (framework de testes unitários)
+- Maven (controle de dependências)
 
 ## Como Executar os Testes
 
-1. Certifique-se de ter o Java e o JUnit configurados em seu ambiente.
+1. Certifique-se de ter o Java, JUnit e Maven configurados em seu ambiente.
 2. Navegue até o diretório raiz do projeto.
 3. Execute o seguinte comando para rodar todos os testes:
     ```
-    java org.junit.runner.JUnitCore <nome_da_classe_de_teste>
+    mvn test
     ```
-   Substitua `<nome_da_classe_de_teste>` pelo nome da classe de teste que você deseja executar.
+
+## Testes Unitários
+
+O projeto inclui uma classe de teste `SimpleMathTest` localizada no diretório `test/`. Esta classe utiliza o framework JUnit para testar os métodos da classe `SimpleMath`, garantindo que eles produzam os resultados esperados para diferentes operações matemáticas.
 
 ## Contribuindo
 
