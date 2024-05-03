@@ -1,13 +1,43 @@
 package br.com.leoferolive.math;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class SimpleMathTest {
 	
+	SimpleMath math;
+	
+	@BeforeAll
+	static void setup() {
+		System.out.println("Rodando método @BeforeAll");
+	}
+
+	@AfterAll
+	static void cleanUp() {
+		System.out.println("Rodando método @AfterAll");
+	}
+	
+	@BeforeEach
+	void beforeEachMethod() {
+		System.out.println("Rodando método @beforeEachMethod");
+		math = new SimpleMath();
+	}
+	
+	@AfterEach
+	void beforeAfterEach() {
+		System.out.println("Rodando método @AfterEach");
+	}
+	
 	@Test
+	@DisplayName("Teste de soma")
 	void testSum() {
-		SimpleMath math = new SimpleMath();
+		System.out.println("Rodando método testSum");
+		
 		double firstNumber = 6.2D;
 		double secondNumber = 2D;
 		Double actual = math.sum(firstNumber, secondNumber);
@@ -20,8 +50,10 @@ class SimpleMathTest {
 	}
 	
 	@Test
+	@DisplayName("Teste de subtração")
 	void testSubtraction() {
-		SimpleMath math = new SimpleMath();
+		System.out.println("Rodando método testSubtraction");
+		
 		double firstNumber = 6.2D;
 		double secondNumber = 2D;
 		Double actual = math.subtraction(firstNumber, secondNumber);
@@ -34,8 +66,10 @@ class SimpleMathTest {
 	}
 	
 	@Test
+	@DisplayName("Teste de multiplicação")
 	void testMultiplication() {
-		SimpleMath math = new SimpleMath();
+		System.out.println("Rodando método testMultiplication");
+		
 		double firstNumber = 6.2D;
 		double secondNumber = 2D;
 		Double actual = math.multiplication(firstNumber, secondNumber);
@@ -48,8 +82,10 @@ class SimpleMathTest {
 	}
 	
 	@Test
+	@DisplayName("Teste de divisão")
 	void testDivision() {
-		SimpleMath math = new SimpleMath();
+		System.out.println("Rodando método testDivision");
+		
 		double firstNumber = 6.2D;
 		double secondNumber = 2D;
 		Double actual = math.division(firstNumber, secondNumber);
@@ -62,8 +98,10 @@ class SimpleMathTest {
 	}
 	
 	@Test
+	@DisplayName("Teste de media")
 	void testMean() {
-		SimpleMath math = new SimpleMath();
+		System.out.println("Rodando método testMean");
+		
 		double firstNumber = 6.2D;
 		double secondNumber = 2D;
 		Double actual = math.mean(firstNumber, secondNumber);
@@ -76,8 +114,10 @@ class SimpleMathTest {
 	}
 	
 	@Test
+	@DisplayName("Teste de raiz quadrada")
 	void testSquareRoot() {
-		SimpleMath math = new SimpleMath();
+		System.out.println("Rodando método testSquareRoot");
+		
 		double number = 16D;
 		Double actual = math.squareRoot(number);
 		double expected = 4D;
