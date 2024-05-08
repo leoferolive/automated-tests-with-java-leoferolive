@@ -15,7 +15,10 @@ public class SimpleMath {
     }
 
     public Double division(Double firstNumber, Double secondNumber) {
-        return firstNumber / secondNumber;
+        if(secondNumber == 0) {
+			throw new ArithmeticException("Can't divide by zero");
+		}
+    	return firstNumber / secondNumber;
     }
 
     public Double mean(Double firstNumber, Double secondNumber) {

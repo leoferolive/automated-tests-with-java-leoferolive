@@ -16,11 +16,13 @@ O objetivo deste projeto é demonstrar como escrever testes unitários eficazes pa
 
 - Java
 - JUnit (framework de testes unitários)
+- Mockito (framework para criação de mocks)
+- Hamcrest (biblioteca para escrita de assertions mais expressivas)
 - Maven (controle de dependências)
 
 ## Como Executar os Testes
 
-1. Certifique-se de ter o Java, JUnit e Maven configurados em seu ambiente.
+1. Certifique-se de ter o Java, JUnit, Mockito, Hamcrest e Maven configurados em seu ambiente.
 2. Navegue até o diretório raiz do projeto.
 3. Execute o seguinte comando para rodar todos os testes:
     ```
@@ -29,8 +31,4 @@ O objetivo deste projeto é demonstrar como escrever testes unitários eficazes pa
 
 ## Testes Unitários
 
-O projeto inclui uma classe de teste `SimpleMathTest` localizada no diretório `test/`. Esta classe utiliza o framework JUnit para testar os métodos da classe `SimpleMath`, garantindo que eles produzam os resultados esperados para diferentes operações matemáticas.
-
-## Contribuindo
-
-Se você quiser contribuir para este projeto, por favor, abra uma issue para discutir suas ideias ou envie um pull request com suas alterações.
+O projeto inclui várias classes de teste localizadas no diretório `test/`, as quais utilizam o framework JUnit, Mockito e Hamcrest para testar diferentes partes do código. Além da `SimpleMathTest`, outras classes de teste estão disponíveis para garantir a qualidade e robustez das funcionalidades implementadas.
